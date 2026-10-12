@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal student portfolio website featuring curated projects, technical skills, academics, and achievements.">
+  <title>Portfolio</title>
+
+  <!-- Favicon emoji data URI -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Google Font: Kanit (weights 300 to 900) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Student data and application scripts (defer preserves execution order) -->
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <noscript>
+    <div class="noscript-banner">
+      <p>This portfolio requires JavaScript to display its dynamic projects and student information. Please enable JavaScript in your browser to view the full experience.</p>
+    </div>
+  </noscript>
+
+  <div class="page-wrapper">
+    <!-- 1. Hero Section -->
+    <header id="home" class="hero-section">
+      <nav class="navbar" id="navbar" aria-label="Main Navigation">
+        <a href="#home" class="brand-mark" id="brand-mark">Portfolio</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="nav-toggle-label">Menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="nav-links" id="primary-navigation">
+          <a href="#about" class="nav-link" id="nav-about">About</a>
+          <a href="#projects" class="nav-link" id="nav-projects">Projects</a>
+          <a href="#skills" class="nav-link" id="nav-skills">Skills</a>
+          <a href="#education" class="nav-link" id="nav-education">Education</a>
+          <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero-heading-wrapper" id="hero-heading-wrapper">
+        <p class="hero-eyebrow" id="hero-eyebrow"></p>
+        <h1 class="hero-heading gradient-title" id="hero-heading">Hi, I'm</h1>
+      </div>
+
+      <div class="engineering-scene" id="engineering-scene" aria-hidden="true">
+        <div class="robot-backdrop"></div>
+        <div class="robot-hud" aria-hidden="true">
+          <span class="robot-hud-label">NEURAL SYSTEMS</span>
+          <span class="robot-hud-coordinate">42.7 / 08.4</span>
+          <span class="robot-hud-line robot-hud-line-one"></span>
+          <span class="robot-hud-line robot-hud-line-two"></span>
+          <span class="robot-hud-dot robot-hud-dot-one"></span>
+          <span class="robot-hud-dot robot-hud-dot-two"></span>
+        </div>
+        <div class="robot-assembly">
+          <div class="robot-model">
+            <div class="robot-antenna"><span></span></div>
+            <div class="robot-head">
+              <div class="robot-head-shell"></div>
+              <div class="robot-crown-panel"></div>
+              <div class="robot-ear robot-ear-left"><span></span></div>
+              <div class="robot-ear robot-ear-right"><span></span></div>
+              <div class="robot-faceplate">
+                <div class="robot-eye robot-eye-left"><span></span></div>
+                <div class="robot-eye robot-eye-right"><span></span></div>
+                <span class="robot-nose-bridge"></span>
+                <span class="robot-face-seam"></span>
+              </div>
+              <div class="robot-jaw-plate"><span></span><i></i></div>
+            </div>
+            <div class="robot-neck"><span></span><i></i></div>
+            <div class="robot-arm robot-arm-left">
+              <span class="robot-shoulder-joint"></span>
+              <span class="robot-elbow-joint"></span>
+              <span class="robot-wrist"></span>
+            </div>
+            <div class="robot-arm robot-arm-right">
+              <span class="robot-shoulder-joint"></span>
+              <span class="robot-elbow-joint"></span>
+              <span class="robot-wrist"></span>
+            </div>
+            <div class="robot-torso">
+              <div class="robot-collar"></div>
+              <div class="robot-chest-panel">
+                <span class="robot-chest-line robot-chest-line-one"></span>
+                <span class="robot-chest-line robot-chest-line-two"></span>
+                <span class="robot-chest-line robot-chest-line-three"></span>
+                <div class="robot-core"><span></span></div>
+                <span class="robot-chest-mark">MK / 01</span>
+              </div>
+              <span class="robot-side-plate robot-side-plate-left"></span>
+              <span class="robot-side-plate robot-side-plate-right"></span>
+            </div>
+          </div>
+          <div class="robot-platform">
+            <span class="robot-platform-ring"></span>
+            <span class="robot-platform-top"></span>
+            <span class="robot-platform-light"></span>
+          </div>
+        </div>
+        <div class="scene-caption"><span>AI COMPANION</span><span>MK.01 / CSE-AI</span></div>
+      </div>
+
+      <!-- Layered portrait wrapper -->
+      <div class="portrait" id="portrait-container">
+        <!-- Inner image dynamically inserted by script.js -->
+      </div>
+
+      <div class="hero-bottom-bar">
+        <p class="hero-description" id="hero-description"></p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-gradient-pill hero-cta">Explore Projects</a>
+          <a href="#contact" class="hero-contact-link" id="hero-contact-btn">Contact Me <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <dl class="profile-facts" id="profile-facts" aria-label="Profile highlights"></dl>
+    </header>
+
+    <main>
+      <!-- 2. About Section -->
+      <section id="about" class="about-section" aria-label="About Me">
+        <div class="about-decorations" id="about-decorations" aria-hidden="true">
+          <!-- 4 corner 3D decorations inserted by script.js -->
+        </div>
+        <div class="about-content">
+          <h2 class="section-heading about-heading">About me</h2>
+          <p class="about-paragraph" id="about-paragraph"></p>
+          <a href="#contact" class="btn-gradient-pill about-cta" id="about-contact-btn">Contact Me</a>
+        </div>
+      </section>
+
+      <!-- 3. Skills Section -->
+      <section id="skills" class="skills-section panel-white" aria-labelledby="skills-heading">
+        <div class="section-inner">
+          <h2 id="skills-heading" class="skills-heading">Skills</h2>
+          <div class="skills-list" id="skills-container"></div>
+        </div>
+      </section>
+
+      <!-- 4. Projects Section -->
+      <section id="projects" class="projects-section panel-dark" aria-labelledby="projects-heading">
+        <div class="section-inner">
+          <h2 id="projects-heading" class="section-heading">Projects</h2>
+          <div class="projects-stack" id="projects-container"></div>
+        </div>
+      </section>
+
+      <!-- 5. Education / Academics Section -->
+      <section id="education" class="education-section panel-white" aria-labelledby="education-heading">
+        <div class="section-inner">
+          <h2 id="education-heading" class="education-heading">Education</h2>
+          <div class="education-list" id="education-container"></div>
+        </div>
+      </section>
+
+      <!-- 6. Achievements Section -->
+      <section id="achievements" class="achievements-section panel-dark" aria-labelledby="achievements-heading">
+        <div class="section-inner">
+          <h2 id="achievements-heading" class="section-heading">Achievements</h2>
+          <div class="achievements-grid" id="achievements-container"></div>
+        </div>
+      </section>
+
+      <!-- 7. Gallery Section -->
+      <section id="gallery" class="gallery-section panel-white" aria-labelledby="gallery-heading">
+        <div class="section-inner">
+          <h2 id="gallery-heading" class="gallery-heading">Gallery</h2>
+          <div class="gallery-grid" id="gallery-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 8. Contact / Footer Section -->
+    <footer id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div class="section-inner contact-inner">
+        <h2 id="contact-heading" class="section-heading">Contact</h2>
+
+        <div class="contact-links" id="contact-links">
+          <!-- email mailto and mobile tel links rendered here -->
+        </div>
+
+        <div class="social-pills" id="social-pills">
+          <!-- LinkedIn, GitHub, Instagram, and Resume ghost pills rendered here -->
+        </div>
+
+        <div class="contact-cta-wrapper">
+          <a href="#contact" class="btn-gradient-pill footer-cta" id="footer-contact-btn">Contact Me</a>
+        </div>
+
+        <p class="copyright-line" id="copyright-text"></p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
